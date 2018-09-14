@@ -1,0 +1,22 @@
+.App-header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-menu {
+  font-size: 1.5em;
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.App-menu__item {
+  padding: 0px 10px;
+}

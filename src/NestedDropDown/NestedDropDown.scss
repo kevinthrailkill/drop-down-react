@@ -1,0 +1,95 @@
+$colors: (
+  primary-color: #dddddd,
+  secondary-color: black
+);
+
+@mixin color-setup($prim-color, $sec-color) {
+  color: $sec-color;
+  background: $prim-color;
+  border: 1px solid $prim-color;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.dropdown {
+  padding: 0px 10px;
+  display: block;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown__header {
+  @include color-setup(
+    map-get($colors, primary-color),
+    map-get($colors, secondary-color)
+  );
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dropdown__title {
+  padding: 10px 30px 10px 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.dropdown__fa {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 45px;
+  z-index: 2;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+.dropdown__menu--left-init {
+  right: 0;
+  margin-right: 8px;
+}
+
+.dropdown__menu--left-align {
+  top: 0;
+  right: 101%;
+}
+
+.dropdown__items {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.dropdown__item {
+  @include color-setup(
+    map-get($colors, primary-color),
+    map-get($colors, secondary-color)
+  );
+  position: relative;
+  font-size: 14px;
+  overflow: visible;
+  white-space: nowrap;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+}
+
+.dropdown__item:hover {
+  @include color-setup(
+    map-get($colors, secondary-color),
+    map-get($colors, primary-color)
+  );
+
+  cursor: pointer;
+}
+
+.dropdown__item__fa {
+  float: right;
+}
