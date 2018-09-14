@@ -96,6 +96,18 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">VideoAmp</h1>
           <div className="App-menu">
+            {/* Uncomment to see menu combined in one single dropdown called departments
+            <NestedDropDown
+              name="Deparartments"
+              key="departments"
+              sub_menu={menu}
+              openDropDown={() => this.openDropDown('departments')}
+              shouldBeOpen={
+                currentLinkOpen === 'departments' || currentLinkOpen === null
+                  ? true
+                  : false
+              }
+            /> */}
             {menu.map(menuItem => {
               return (
                 <NestedDropDown
